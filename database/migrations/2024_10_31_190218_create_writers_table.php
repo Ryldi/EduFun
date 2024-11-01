@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('writers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image_link');
+            $table->string('specialist');
             $table->timestamps();
         });
     }

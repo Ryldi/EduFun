@@ -12,7 +12,7 @@ class Course extends Model
     protected $table = 'courses';
     protected $guarded = [];
 
-    public function categories() 
+    public function category() 
     {
         return $this->belongsTo(Category::class);
     }

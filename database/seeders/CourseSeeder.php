@@ -27,9 +27,9 @@ class CourseSeeder extends Seeder
         for ($i=0; $i < 6; $i++) { 
             Course::create([
                 'category_id' => $i < 3 ? 1 : 2,
-                'writer_id' => rand(1, 3),
+                'writer_id' => $i < 3 ? 2 : 1,
                 'name' => $name[$i],
-                'description' => $faker->text,
+                'description' => $faker->paragraph(rand(5, 7)) . "\n\n" . $faker->paragraph(rand(6, 8)),
                 'image_link' => $i+1
             ]);
         }

@@ -19,9 +19,17 @@ class WriterSeeder extends Seeder
             'Bia Mecca Annisa'
         ];
 
-        foreach ($name as $name) {
+        $specialist = [
+            'Interactive Multimedia Specialist',
+            'Software Engineering Specialist',
+            'Data Science Specialist'	
+        ];
+
+        for ($i=0; $i < 3 ; $i++) { 
             Writer::create([
-                'name' => $name
+                'name' => $name[$i],
+                'image_link' => $i+1,
+                'specialist' => $specialist[$i]
             ]);
         }
     }
