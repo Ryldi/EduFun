@@ -13,7 +13,8 @@ class CourseController extends Controller
     }
 
     public function get_popular(){
-        $courses = Course::with(['category','writer'])->get()->random()->paginate(3);
+        //kalau ada algo popularity letaknya di method ini
+        $courses = Course::with(['category','writer'])->paginate(3);
         return view('course.popular', compact('courses'));
     }
 }
