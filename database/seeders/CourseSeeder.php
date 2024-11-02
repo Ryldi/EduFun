@@ -14,7 +14,7 @@ class CourseSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create('id_ID');
+        $faker = Faker::create();
         $name = [
             'Pattern Software Design',
             'Agile Software Development',
