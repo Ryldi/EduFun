@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function get_category(){
         $categories = Category::with(['courses.writer'])->get();
-        $courses = $categories->pluck('courses')->flatten()->random(2);
+        $courses = $categories->pluck('courses')->flatten();
         return view('main.home', compact('categories', 'courses'));
     }
 
